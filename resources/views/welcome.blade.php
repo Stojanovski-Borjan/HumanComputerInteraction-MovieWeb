@@ -19,24 +19,27 @@
 <!-- CARDS -->
 <div class="container">
     <div class="row">
-        <div class="card-group">
+        <div class="card-group ">
             @foreach($posts as $post)
-            <div class="card cards m-1   {{$post->genre}}">
-                <img src="{{$post->photo}}" width="100" height="280" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <div class='row'>
+        <div class="col-md-6 col-xl-3 col-lg-3 col-sm-12 " style="padding:1% 0.5% !important;">
 
-                        <div class='col-md-xl-5 col-lg-5 col-md-12 col-sm-12 col-12'>
-                            <h5 class="card-title text-center">{{$post->title}}</h5>
-                        </div>
-                        <div class='col-md-xl-6 col-lg-6 col-md-12 col-sm-12 col-12'>
-                            <p class="card-text text-center getGenre" style="border: 1px dashed; border-radius: 1.2rem;">{{$post->genre}}</p>
-
+                <div class="card cards  {{$post->genre}}">
+                    <img src="{{$post->photo}}" width="100" height="280" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class='row'>
+                            
+                            <div class='col-md-xl-5 col-lg-5 col-md-12 col-sm-12 col-12'>
+                                <h5 class="card-title text-center">{{$post->title}}</h5>
+                            </div>
+                            <div class='col-md-xl-6 col-lg-6 col-md-12 col-sm-12 col-12'>
+                                <p class="card-text text-center getGenre" style="border: 1px dashed; border-radius: 1.2rem;">{{$post->genre}}</p>
+                                
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card-footer">
-                    <a href="/post/show/{{$post->id}}" class="btn btn-block btn-outline-dark">Read More!</a>
+                    <div class="card-footer">
+                        <a href="/post/show/{{$post->id}}" class="btn btn-block btn-outline-dark">Read More!</a>
+                    </div>
                 </div>
             </div>
             @endforeach

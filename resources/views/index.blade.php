@@ -22,6 +22,8 @@
     <div class="row">
         <div class="card-group">
             @foreach($posts as $post)
+            <div class="col-md-6 col-xl-3 col-lg-3 col-sm-12 " style="padding:1% 0.5% !important;">
+
             <div class="card cards m-1 mt-2 mb-3  {{$post->genre}}">
                 <img src="{{$post->photo}}" width="100" height="280" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -39,6 +41,7 @@
                 <div class="card-footer">
                     <a href="/post/show/{{$post->id}}" class="btn btn-block btn-outline-dark">Read More!</a>
                 </div>
+            </div>
             </div>
             @endforeach
         </div>
